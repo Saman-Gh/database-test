@@ -3,7 +3,7 @@ const pool = require('../../repositories/shared/db');
 // This asynchronous function generates a new class ID.
 async function newClassId () {
     try {
-        const res = await pool.query(`SELECT * FROM student ORDER BY student_id ASC;`);
+        const res = await pool.query(`SELECT * FROM class ORDER BY class_id ASC;`);
         if (res.rows.length === 0) {
             return 1;
         }else {
