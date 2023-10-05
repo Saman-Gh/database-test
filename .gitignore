@@ -1,3 +1,4 @@
 node_modules
 .env
 src/repositories/shared/db.js
+.package-lock.json

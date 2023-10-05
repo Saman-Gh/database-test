@@ -3,7 +3,7 @@ const pool = require('../../repositories/shared/db');
 // This asynchronous function generates a new teacher ID.
 async function newTeacherId () {
     try{
-        let res = await pool.query(`SELECT * FROM teacher`);
+        const res = await pool.query(`SELECT * FROM student ORDER BY student_id ASC;`);
         if (res.rows.length === 0){
             return 1;
         }
